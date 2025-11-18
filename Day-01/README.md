@@ -6,7 +6,7 @@ Welcome to Day 1 of the 14-day Python DevOps Launchpad! Today is about building 
 
 - Install or verify Python 3.10+
 - Configure your preferred editor (VS Code recommended)
-- Run the classic `hello world` script in `examples/hello_world.py`
+- Run the classic `hello world` script in `02-hello-world.py`
 - Compare shell scripts with Python scripts using `01-shell-vs-python.md`
 - Capture questions or blockers for tomorrow’s session
 
@@ -69,7 +69,7 @@ Welcome to Day 1 of the 14-day Python DevOps Launchpad! Today is about building 
 ## Agenda
 
 1. **Read:** `01-shell-vs-python.md` to see where Python shines in DevOps workflows.
-2. **Try:** Execute `examples/hello_world.py` with `python examples/hello_world.py`.
+2. **Try:** Execute `02-hello-world.py` with `python 02-hello-world.py`.
 3. **Reflect:** Update a learning log (create your own `notes.md`!) with one automation idea you can build after this bootcamp.
 4. **Stretch Goal:** Explore the Python REPL and experiment with `print()` or simple math expressions.
 5. **Bonus:** Run the scripts in `examples/` (start with `examples/hello_user.py`) to practice capturing input and exiting gracefully.

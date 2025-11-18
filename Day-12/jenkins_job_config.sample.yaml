@@ -1,0 +1,8 @@
+job_name: sample-service-ci
+folder: platform/services
+description: "CI pipeline for Sample Service (provisioned via Python)"
+git_url: https://github.com/example/sample-service.git
+branch: "*/main"
+jenkinsfile: Jenkinsfile
+credentials_id: github-personal-access-token
+

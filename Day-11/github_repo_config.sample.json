@@ -1,0 +1,19 @@
+{
+  "owner": "your-github-username-or-org",
+  "owner_type": "user",
+  "name": "sample-devops-service",
+  "description": "Demo repository provisioned via Python script",
+  "private": true,
+  "topics": ["devops", "automation", "python"],
+  "auto_init": true,
+  "has_issues": true,
+  "has_projects": false,
+  "has_wiki": false,
+  "initial_files": [
+    {
+      "path": "README.md",
+      "message": "seed README",
+      "content": "# Sample DevOps Service\n\nProvisioned with the Python DevOps Launchpad scripts."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+project_key: sample-service
+project_name: Sample Service
+main_branch: main
+visibility: private
+quality_profile:
+  language: py
+  profile: "Company Python"
+token:
+  name: sample-service-ci
+

@@ -1,8 +1,8 @@
 # Python for DevOps — 14-Days Schedule
 
-Welcome! This two-week track walks you through the Python skills that power modern DevOps workflows—from simple scripts to cloud automation. Python is the go-to language for AWS and other clouds because it’s readable, batteries-included, and supported by every major provider. You’ll use tools like `boto3` for infrastructure, `requests` for APIs, and lightweight modules that knit CI/CD pipelines together.
+Welcome to this 14-day sprint that builds the Python chops behind modern DevOps—from quick scripts to full-blown cloud automation. Because Python is readable, batteries-included, and backed by every major provider, you can lean on `boto3`, `requests`, and countless SDKs to wire AWS and other platforms together fast.
 
-Move day by day (`Day-XX/`), try the exercises, and adapt the code to your own environment. By the end you’ll see how one language lets you script local tasks, automate release pipelines, and orchestrate cloud services.
+Work through one folder per day (`Day-XX/`), complete the hands-on challenges, and bend the code to your environment. You’ll finish with a single language that handles local tooling, CI/CD pipelines, and cloud orchestration.
 
 ### Why Python matters in DevOps
 

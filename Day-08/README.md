@@ -1,37 +1,47 @@
-# Day 8 · Collections & Data Structures
+# Day 8 · Lists & Dictionaries
 
-Today is a deep dive into Python collections that power most DevOps automation: lists, tuples, dictionaries, and sets. You’ll explore how to build inventory lists, reason about immutability, and model infrastructure metadata with nested dictionaries. We’ll also extend into advanced list comprehensions so you can transform data in a single, expressive line of code.
+Today we will learn how to store *collections* of data. Instead of having `server1`, `server2`, `server3`, we can have a single list called `servers`.
 
-## Learning Goals
+## What You Will Learn
 
-- Build and slice lists representing infrastructure inventories.
-- Choose between tuples, dictionaries, and sets for configuration management.
-- Apply list and dictionary comprehensions to reshape data quickly.
+-   **Lists:** An ordered list of items (e.g., `["web-server", "db-server"]`).
+-   **Dictionaries:** Data stored in key-value pairs (e.g., `{"name": "web-server", "ip": "10.0.0.1"}`).
+-   **Sets:** A list where every item is unique (no duplicates allowed).
 
-## Agenda
+## Instructions
 
-1. Review `01-Notes/` for foundational list/tuple concepts.
-2. Explore `02-Assigment/` exercises to reinforce basic operations.
-3. Read through `03-dictionaries-sets/` to master nested dictionaries, set operations, and uniqueness checks.
-4. Run the advanced scripts under `examples/` and refactor them with comprehensions.
+1.  **Read:** The examples below show how to use Lists and Dictionaries.
+2.  **Run Example:** Run the script to list files in different folders.
+    ```bash
+    cd examples
+    # Enter folder names when prompted (e.g., /tmp /var)
+    python3 03-list-files-in-folders.py
+    ```
+3.  **Experiment:** Try passing a folder that doesn't exist to see how the script handles errors.
 
-## Practice Prompts
+## Checklist
 
-- Group hosts by environment (`dev`, `stage`, `prod`) using nested lists and summarize counts per environment.
-- Merge two configuration dictionaries, preferring overrides from the second one.
-- Use a set to detect duplicate SNS topic subscriptions across accounts.
-- Rewrite `03-list-files-in-folders.py` with a comprehension that filters out empty directories.
+-   [ ] I can create a list: `my_list = [1, 2, 3]`.
+-   [ ] I can create a dictionary: `my_dict = {"key": "value"}`.
 
-## Deliverable
+---
 
-Commit a utilities module that exposes at least three functions:
+# Python Collections
 
-- `load_services()` returns a list of service dictionaries.
-- `group_by_owner()` accepts that list and returns a dictionary keyed by owner.
-- `missing_tags()` accepts a set of required tags and reports the services missing one or more of them.
+## 1. Lists
+Great for keeping track of things in order.
+```python
+servers = ["web-01", "db-01", "cache-01"]
+print(servers[0])  # Prints "web-01"
+```
 
-## Stretch Goals
-
-- Explore `collections.deque` for work queues that need fast pops from both ends.
-- Use dictionary comprehensions to shape payloads for upcoming API calls (GitHub or Jenkins).
-- Combine sets and comprehensions to surface owners who maintain more than three services.
+## 2. Dictionaries
+Great for storing details about a specific thing.
+```python
+server_config = {
+    "hostname": "web-01",
+    "ip": "192.168.1.5",
+    "active": True
+}
+print(server_config["ip"])  # Prints "192.168.1.5"
+```

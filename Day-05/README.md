@@ -1,31 +1,34 @@
-# Day 5 · Command-Line Interfaces & Environment Variables
+# Day 5 · Command-Line Tools (CLI)
 
-Infrastructure scripts rarely run in isolation—they accept parameters, honor environment variables, and act differently across environments. Today you’ll practice building robust command-line interfaces (CLIs) and securing configuration secrets.
+Today we will learn how to make our scripts interactive so we can pass options to them (like `--dry-run` or `--verbose`).
 
-## Learning Goals
+## What You Will Learn
 
-- Parse arguments with `argparse` or `typer`.
-- Read environment variables safely and provide sensible defaults.
-- Load `.env` files for local development without leaking secrets.
+-   **Arguments:** How to pass information to your script when you run it.
+-   **Environment Variables:** How to read secret settings (like passwords) safely.
 
-## Agenda
+## Instructions
 
-1. Experiment with `os.environ`, `dotenv`, and `argparse` in small snippets (see `examples/config_cli.py` for a reference solution).
-2. Convert yesterday’s configuration loader into a CLI that prints the active environment.
-3. Create a `.env.example` template listing required variables for future automation scripts.
-4. Record decisions in `notes.md`.
+1.  **Read:** Understand that `argparse` is the tool we use to read command-line arguments.
+2.  **Run Example:** Run the script with different flags.
+    ```bash
+    cd examples
+    # Run with default settings
+    python3 config_cli.py
 
-## Practice Prompts
+    # Run with a specific environment
+    python3 config_cli.py --environment production
 
-- Build a CLI that accepts `--environment` and `--dry-run` flags.
-- Implement validation that fails fast when required environment variables are missing.
-- Echo masked values (e.g., `TOKEN=****7890`) when running in verbose mode.
+    # Run in "dry run" mode (simulation)
+    python3 config_cli.py --dry-run
+    ```
+3.  **Experiment:** Try setting an API token before running the script:
+    ```bash
+    export API_TOKEN="secret123"
+    python3 config_cli.py
+    ```
 
-## Deliverable
+## Checklist
 
-Commit a script inside `examples/` (e.g., `examples/config_cli.py`) that loads env vars, merges them with CLI flags, and prints a structured summary ready for use in later projects.
-
-## Stretch Goals
-
-- Integrate with `click` or `typer` for richer CLI experiences.
-- Add unit tests that mock environment variables using `unittest.mock.patch`.
+-   [ ] I can pass a flag (like `--help`) to a python script.
+-   [ ] I understand why we use Environment Variables for secrets (so we don't save passwords in the code).

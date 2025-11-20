@@ -1,35 +1,27 @@
 # Python for DevOps — 14-Days Schedule
 
-Welcome to this 14-day sprint that builds the Python chops behind modern DevOps—from quick scripts to full-blown cloud automation. Because Python is readable, batteries-included, and backed by every major provider, you can lean on `boto3`, `requests`, and countless SDKs to wire AWS and other platforms together fast.
+Welcome! This 14-day guide will help you learn Python for DevOps. You'll go from writing simple scripts to automating cloud tasks.
 
-Work through one folder per day (`Day-XX/`), complete the hands-on challenges, and bend the code to your environment. You’ll finish with a single language that handles local tooling, CI/CD pipelines, and cloud orchestration.
+**Goal:** By the end, you will be able to use Python to automate tasks, build pipelines, and manage cloud resources.
 
-### Why Python matters in DevOps
+### Why Python for DevOps?
 
-- **Automation glue:** Python bridges gaps between Terraform plans, shell scripts, and platform APIs without a steep learning curve.
-- **Cloud tooling:** AWS, Azure, GCP, and Kubernetes ship first-class SDKs and CLIs in Python, making it easy to automate resource provisioning and audits.
-- **CI/CD scripting:** Pipelines use Python for test runners, deployment hooks, and verification steps.
-- **Serverless & event-driven:** Services like AWS Lambda support Python out of the box, letting DevOps teams build quick event processors and remediation bots.
-- **Community & libraries:** Thousands of open-source modules shorten development time and encourage reusable playbooks.
+- **Easy to Learn:** Python is readable and great for beginners.
+- **Powerful:** It connects easily with tools like AWS, Jenkins, and GitHub.
+- **Popular:** Most DevOps tools support Python.
 
 ## Getting Started
 
-1. **Install Python 3.10+** using the OS-specific steps in `Day-01/README.md` (Homebrew, Windows installer, or apt).
-2. **Clone the repo** and explore the days sequentially.
-3. **Create a virtual environment** before installing dependencies such as `requests`, `boto3`, or `python-jenkins`: `python3 -m venv .venv && source .venv/bin/activate`.
-4. **Install common dependencies** once you reach automation week:
-	```bash
-	pip install -r requirements.txt
-	```
-5. **Set up environment variables** (API tokens, credentials) with the `.env.example` templates you’ll create in later days.
-6. **Capture notes and blockers** in each `Day-XX/notes.md` so you can iterate quickly.
+1.  **Start at Day 1:** Go to the `Day-01/` folder and follow the `README.md` instructions to set up your computer.
+2.  **One Day at a Time:** Work through one folder each day.
+3.  **Practice:** Type out the code examples yourself.
+4.  **Ask Questions:** If you get stuck, search online or ask a community.
 
-### Recommended Toolkit
+### What You Need
 
-- Python 3.10+
-- VS Code (Python + REST Client extensions recommended)
-- curl/Postman for API exploration
-- Access to: GitHub personal access token, Jenkins server (or local instance), SonarQube instance, AWS credentials
+-   **Computer:** Mac, Windows, or Linux.
+-   **Internet:** To download tools and read documentation.
+-   **Time:** About 1 hour per day.
 
 ## Week 1 — Python Foundations for Automation
 

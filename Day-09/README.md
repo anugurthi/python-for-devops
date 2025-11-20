@@ -1,31 +1,44 @@
-# Day 9 · Loops & Iteration Patterns
+# Day 9 · Loops (For & While)
 
-Automation scripts thrive on iteration—looping through servers, log lines, or API responses. Today you’ll sharpen your loop skills and prepare for pagination-heavy API calls next week.
+Today we will learn how to repeat actions without writing the same code over and over.
 
-## Learning Goals
+## What You Will Learn
 
-- Choose between `for` and `while` loops based on the problem.
-- Use `break`, `continue`, and `else` clauses for fine-grained control.
-- Iterate safely over nested data structures.
+-   **For Loops:** Repeat something for every item in a list (e.g., "Restart every server").
+-   **While Loops:** Repeat something *while* a condition is true (e.g., "Wait while the server is starting").
 
-## Agenda
+## Instructions
 
-1. Read `01-loops.md` and `02-loop-controls.md` for a refresher.
-2. Work through `03-for-loop-devops-usecases.md` and `04-while-loop-devops-usecases.md` examples.
-3. Implement a loop inside `examples/` (see `examples/pagination_loop.py`) that paginates through mocked API responses stored in a list.
-4. Record takeaways and questions in your notes.
+1.  **Read:** The examples below show how `for` and `while` loops work.
+2.  **Run Example:** Run the script to see how we process data in "pages" (chunks).
+    ```bash
+    cd examples
+    python3 pagination_loop.py
+    ```
+3.  **Experiment:** Change the `page_size` in the script to see how it changes the output.
 
-## Practice Prompts
+## Checklist
 
-- Iterate over a list of repositories and print which ones need default branches renamed.
-- Use a `while` loop to retry an API call up to three times with exponential backoff.
-- Combine loops with list comprehensions to flatten nested inventories.
+-   [ ] I can write a loop to print numbers 1 to 10.
+-   [ ] I understand when to use `for` vs `while`.
 
-## Deliverable
+---
 
-Commit a script in `examples/` that loops through service definitions, validates required fields, and reports any missing metadata.
+# Python Loops
 
-## Stretch Goals
+## 1. For Loop
+Best when you have a list of things.
+```python
+servers = ["web-01", "db-01"]
+for server in servers:
+    print(f"Checking {server}...")
+```
 
-- Profile loop performance with Python’s `timeit` module.
-- Explore generator functions to stream large datasets without loading them fully into memory.
+## 2. While Loop
+Best when you are waiting for something.
+```python
+count = 0
+while count < 5:
+    print(f"Count is {count}")
+    count = count + 1
+```

@@ -1,31 +1,28 @@
-# Day 10 · HTTP, REST, and Authentication Fundamentals
+# Day 10 · Calling APIs with Python
 
-Before we automate GitHub, Jenkins, or SonarQube, we need to understand how APIs expect requests. Today is about HTTP verbs, status codes, headers, and auth flows.
+Today we will learn how to talk to web services (APIs) using Python. This is how you automate tools like GitHub, Jenkins, and AWS.
 
-## Learning Goals
+## What You Will Learn
 
-- Issue GET/POST/PUT/DELETE requests using the `requests` library.
-- Handle authentication via personal access tokens (PATs) and basic auth.
-- Parse JSON responses and deal with pagination or rate limits.
+-   **HTTP Requests:** How to ask a web service for data (GET) or send data toit (POST).
+-   **Authentication:** How to prove who you are (using tokens).
+-   **JSON:** How to work with data in JSON format.
 
-## Agenda
+## Instructions
 
-1. Use `requests` to call a public API (e.g., GitHub’s rate limit endpoint) and inspect headers.
-2. Practice sending authenticated requests with a dummy token (stored in `.env`).
-3. Write helper functions that wrap API calls with retry logic and consolidated error handling.
-4. Capture findings in a `notes.md` file.
+1.  **Read:** Understand that `requests` is the library we use to call APIs.
+2.  **Run Example:** Run the script to get a list of GitHub pull requests.
+    ```bash
+    cd examples
+    python3 list_open_pull_requests.py
+    ```
+3.  **Experiment:** Set a GitHub token to get higher rate limits:
+    ```bash
+    export GITHUB_TOKEN="your_token_here"
+    python3 list_open_pull_requests.py
+    ```
 
-## Practice Prompts
+## Checklist
 
-- Implement a `call_api` utility that logs the URL, status code, and elapsed time.
-- Parse JSON into Python dictionaries and extract specific fields (e.g., repo names, job counts).
-- Handle `429 Too Many Requests` by respecting `Retry-After` headers.
-
-## Deliverable
-
-Commit a `rest_client.py` that exposes a `request_json(method, url, **kwargs)` helper reused in future days.
-
-## Stretch Goals
-
-- Explore OAuth flows conceptually and outline how you’d integrate them.
-- Use `httpx` or `aiohttp` for async API calls and compare performance.
+-   [ ] I can make a GET request to an API.
+-   [ ] I understand that APIs return data in JSON format.

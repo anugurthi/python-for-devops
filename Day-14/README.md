@@ -1,34 +1,29 @@
-# Day 14 · AWS Inventory & Tag Auditing
+# Day 14 · Automating AWS with Python
 
-Wrap up the 14-day sprint by inspecting AWS environments with Python. You’ll list foundational resources (EC2, S3, RDS) and build a tag-audit report to highlight compliance gaps.
+Today we will learn how to list and manage AWS resources (like servers and storage) using Python.
 
-## Learning Goals
+## What You Will Learn
 
-- Configure boto3 sessions with profiles and regions.
-- Paginate through AWS APIs to aggregate resources reliably.
-- Filter resources by tag key/value pairs and flag missing metadata.
+-   **boto3:** The Python library for talking to AWS.
+-   **AWS Resources:** How to list EC2 instances (servers) and S3 buckets (storage).
+-   **Tags:** How to check if resources are properly labeled.
 
-## Agenda
+## Instructions
 
-1. Review AWS authentication options (environment variables, profiles, IAM roles).
-2. Run `examples/aws_inventory.py` to enumerate EC2 instances and S3 buckets in your sandbox account.
-3. Study `examples/aws_tag_audit.py` and experiment with different `--services` combinations.
-4. Export findings to a CSV/JSON summary for your stakeholders.
+1.  **Setup:** You need AWS credentials configured on your computer (ask your team how to set this up).
+2.  **Run Example:** Look at the example scripts in `examples/` to see how to list AWS resources.
+3.  **Why This Matters:** Companies have thousands of AWS resources. Python helps you manage them at scale.
 
-## Practice Prompts
+## Checklist
 
-- Extend `examples/aws_inventory.py` to include RDS instance identifiers and states.
-- Add an option to `examples/aws_tag_audit.py` that writes missing-tag resources to `missing_tags.json`.
-- Support multi-region scans by iterating over a list of regions pulled from AWS Organizations or config files.
+-   [ ] I understand what EC2 and S3 are (servers and storage).
+-   [ ] I can see how Python can list and check AWS resources.
 
-## Deliverable
+## Congratulations! 🎉
 
-Commit updated AWS utilities that can:
+You've completed the 14-day Python for DevOps course! You now know how to:
+-   Write Python scripts
+-   Work with files and APIs
+-   Automate GitHub, Jenkins, SonarQube, and AWS
 
-- Print a human-readable inventory of EC2 instances and S3 buckets.
-- Report resources missing required tags using `--include-missing`.
-
-## Stretch Goals
-
-- Integrate with AWS Organizations or Control Tower to loop through multiple accounts.
-- Send audit results to Slack, email, or ticketing systems for follow-up.
+Keep practicing and building!

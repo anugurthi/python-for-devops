@@ -1,31 +1,19 @@
-# Day 13 · SonarQube Project Automation
+# Day 13 · Automating SonarQube with Python
 
-Today’s focus is SonarQube: programmatically creating projects, provisioning tokens, and wiring code quality checks into your CI pipelines.
+Today we will learn how to create SonarQube projects using Python. SonarQube is a tool that checks your code for bugs and quality issues.
 
-## Learning Goals
+## What You Will Learn
 
-- Authenticate to SonarQube’s REST API using admin tokens.
-- Provision new projects and generate analysis tokens on demand.
-- Configure quality profiles or gates via API calls.
+-   **SonarQube API:** How to create SonarQube projects programmatically.
+-   **Code Quality:** Understanding why we check code quality automatically.
 
-## Agenda
+## Instructions
 
-1. Review SonarQube API docs for project creation and token management.
-2. Explore `examples/sonarqube_project_setup.py` and `sonarqube_project.sample.yaml` to understand required payloads.
-3. Build a helper that checks whether a project exists before creating it (idempotency).
-4. Document quality gate requirements for your organization.
+1.  **Setup:** You need access to a SonarQube server and an admin token.
+2.  **Run Example:** Look at the example scripts in `examples/` to see how to create SonarQube projects.
+3.  **Why This Matters:** SonarQube finds bugs in your code before they reach production.
 
-## Practice Prompts
+## Checklist
 
-- Create a script that assigns a project to a specific quality profile.
-- Generate a long-lived token and store it securely (e.g., in a `.env` file or secrets manager).
-- Trigger a sample analysis using the generated token and log the result URL.
-
-## Deliverable
-
-Commit `examples/sonarqube_project_setup.py` plus a `config.json` sample describing project key, name, default branch, and quality profile.
-
-## Stretch Goals
-
-- Integrate with Jenkins Job DSL so the token feeds into your CI pipeline automatically.
-- Query SonarQube for existing issues and produce a summary report.
+-   [ ] I understand what SonarQube does (finds bugs and code smells).
+-   [ ] I can see how Python can automate SonarQube project creation.

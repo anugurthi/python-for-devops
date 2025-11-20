@@ -1,31 +1,25 @@
-# Day 2 · Data Types & Strings in Action
+# Day 2 · Data Types & Strings
 
-This day sets the foundation for manipulating configuration files, logs, and API payloads. You’ll explore core Python data types, string formatting, and the basics of regular expressions using the resources in this folder.
+Today we will learn about the different types of data Python can handle, like text (strings) and numbers (integers/floats).
 
-## Learning Goals
+## What You Will Learn
 
-- Differentiate between `str`, `int`, `float`, `bool`, and collections.
-- Slice, format, and transform strings to sanitize inputs or craft API requests.
-- Use regular expressions to extract signals from log lines.
+-   **Strings:** How to work with text.
+-   **Numbers:** How to do math with integers and decimals.
+-   **Regex:** How to find patterns in text (like finding an email address in a log file).
 
-## Agenda
+## Instructions
 
-1. Read `01-data-types.md` and work through the examples.
-2. Experiment with `Day-02/examples/` scripts (concat, length, replace, regex operations).
-3. Extend `examples/strings.py` with helper functions for masking secrets or normalizing usernames.
-4. Capture takeaways in a personal `notes.md`.
+1.  **Read:** Open `01-data-types.md` to learn the basics.
+2.  **Run Examples:** Go to the `examples/` folder and run the scripts to see them in action.
+    ```bash
+    cd examples
+    python3 01-string-concat.py
+    ```
+3.  **Experiment:** Try changing the text in the scripts and running them again.
 
-## Practice Prompts
+## Checklist
 
-- Write a function that redacts values that look like API tokens.
-- Parse a simulated log entry and pull out timestamp, severity, and message text.
-- Convert a CSV line into a Python dictionary using split operations.
-
-## Deliverable
-
-Commit an updated `examples/strings.py` (or a new `examples/string_utils.py`) implementing at least three utility functions you can reuse later in the course.
-
-## Stretch Goals
-
-- Explore Python’s `pathlib` to sanitize filenames before saving logs.
-- Use `re.compile` with named groups to make regex matches easier to read.
+-   [ ] I know the difference between a String ("text") and an Integer (123).
+-   [ ] I can combine two strings together.
+-   [ ] I can use a "regex" to find a word in a sentence.

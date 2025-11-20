@@ -1,31 +1,28 @@
-# Day 3 · Variables, Scope & Configuration Data
+# Day 3 · Variables & Configuration
 
-Today you’ll learn how Python stores data, how scope works, and how to organize configuration values so they’re easy to reuse across automation scripts.
+Today we will learn how to store data in variables and how to organize settings (configuration) for your scripts.
 
-## Learning Goals
+## What You Will Learn
 
-- Distinguish between global, local, and nonlocal scope.
-- Apply naming conventions that make automation scripts readable.
-- Store environment-specific values in dictionaries or data classes.
+-   **Variables:** How to name and store data.
+-   **Scope:** Where variables can be used (inside or outside functions).
+-   **Configuration:** How to use "Environment Variables" to change how your script runs without changing the code.
 
-## Agenda
+## Instructions
 
-1. Review `variables.md` and `keywords.md`.
-2. Refactor yesterday’s string utilities to use constants for regex patterns.
-3. Create a `examples/config_scopes.py` (or similar) showing how to load settings from `.env` files.
-4. Document best practices in a personal note.
+1.  **Read:** Open `variables.md` to understand how to name things properly.
+2.  **Run Example:** Run the script to see how it picks up settings.
+    ```bash
+    cd examples
+    python3 config_scopes.py
+    ```
+3.  **Experiment:** Try setting an environment variable before running the script:
+    ```bash
+    export AWS_REGION="us-west-2"
+    python3 config_scopes.py
+    ```
 
-## Practice Prompts
+## Checklist
 
-- Write a function that returns configuration for a given environment (dev/stage/prod).
-- Demonstrate the difference between mutating a global list versus copying it.
-- Replace magic numbers in earlier scripts with clearly named constants.
-
-## Deliverable
-
-Add a short script inside `examples/` that prints which configuration file would be loaded based on an `ENVIRONMENT` environment variable.
-
-## Stretch Goals
-
-- Explore Python’s `dataclasses` to model configuration payloads.
-- Use `typing.TypedDict` to add lightweight type hints.
+-   [ ] I understand how to name variables (e.g., `my_variable` instead of `x`).
+-   [ ] I know how to read a value from the environment (`os.getenv`).
